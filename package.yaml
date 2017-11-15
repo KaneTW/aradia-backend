@@ -1,0 +1,40 @@
+name: aradia-backend
+version: '0.1.0.0'
+category: Discord
+author: David Kraeutmann
+maintainer: kane@kane.cx
+copyright: 2017 David Kraeutmann
+license: BSD3
+github: KaneTW/aradia-backend
+extra-source-files:
+- README.md
+
+default-extensions:
+  - FlexibleContexts
+  - FlexibleInstances
+  - MultiParamTypeClasses
+  - FunctionalDependencies
+  - TypeFamilies
+  - TemplateHaskell
+  - GeneralizedNewtypeDeriving
+  - OverloadedStrings
+  - TypeOperators
+  - ConstraintKinds
+  - ScopedTypeVariables
+  - GADTs
+library:
+  source-dirs: src
+  exposed-modules:
+  - Aradia.Backend
+  dependencies:
+  - base >=4.10 && <5
+  - text >=1.2
+  - lens >=4.15
+  - mtl >=2.2
+  - lifted-base >=0.2
+  - monad-control >=1.0
+  - transformers >=0.5
+  - transformers-base >=0.4
+  - megaparsec >=6.2
+  - bytestring >=0.10
+  - aeson >=1.2
