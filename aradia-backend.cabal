@@ -24,9 +24,11 @@ source-repository head
 library
   hs-source-dirs:
       src
-  default-extensions: FlexibleContexts FlexibleInstances MultiParamTypeClasses FunctionalDependencies TypeFamilies TemplateHaskell GeneralizedNewtypeDeriving OverloadedStrings TypeOperators ConstraintKinds ScopedTypeVariables GADTs
+  default-extensions: FlexibleContexts FlexibleInstances MultiParamTypeClasses FunctionalDependencies TypeFamilies TemplateHaskell GeneralizedNewtypeDeriving OverloadedStrings TypeOperators ConstraintKinds ScopedTypeVariables GADTs DeriveTraversable QuasiQuotes TypeApplications RankNTypes LambdaCase TypeInType StandaloneDeriving
   build-depends:
       base >=4.10 && <5
+    , template-haskell
+    , split
     , text >=1.2
     , lens >=4.15
     , mtl >=2.2
@@ -37,8 +39,31 @@ library
     , megaparsec >=6.2
     , bytestring >=0.10
     , aeson >=1.2
+    , servant >=0.11
+    , vector >=0.12
+    , scientific >=0.3
+    , time >=1.8
+    , integer-logarithms >=1.0
+    , containers
+    , unordered-containers
+    , singletons
+    , pretty-show
   exposed-modules:
       Aradia.Backend
-  other-modules:
-      Paths_aradia_backend
+      Aradia.Backend.API
+      Aradia.Backend.API.AuditLog
+      Aradia.Backend.API.Channel
+      Aradia.Backend.API.Emoji
+      Aradia.Backend.API.Guild
+      Aradia.Backend.API.Invite
+      Aradia.Backend.API.User
+      Aradia.Backend.API.Voice
+      Aradia.Backend.API.Webhook
+      Aradia.Backend.Types
+      Aradia.Backend.Types.AuditLog
+      Aradia.Backend.Types.Common
+      Aradia.Backend.Types.Guild
+      Aradia.Backend.Types.User
+      Aradia.Backend.Types.Webhook
+      Aradia.Backend.Utils
   default-language: Haskell2010

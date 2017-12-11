@@ -22,12 +22,19 @@ default-extensions:
   - ConstraintKinds
   - ScopedTypeVariables
   - GADTs
+  - DeriveTraversable
+  - QuasiQuotes
+  - TypeApplications
+  - RankNTypes
+  - LambdaCase
+  - TypeInType
+  - StandaloneDeriving
 library:
   source-dirs: src
-  exposed-modules:
-  - Aradia.Backend
   dependencies:
   - base >=4.10 && <5
+  - template-haskell
+  - split
   - text >=1.2
   - lens >=4.15
   - mtl >=2.2
@@ -38,3 +45,12 @@ library:
   - megaparsec >=6.2
   - bytestring >=0.10
   - aeson >=1.2
+  - servant >=0.11
+  - vector >=0.12
+  - scientific >=0.3
+  - time >=1.8
+  - integer-logarithms >=1.0
+  - containers
+  - unordered-containers
+  - singletons
+  - pretty-show
